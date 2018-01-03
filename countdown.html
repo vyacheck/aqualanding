@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Display the countdown timer in an element -->
+    <p id="countdown"></p>
+
+    <script>
+        //Функцией добавляем "0" к секундам от 0 до 9 
+        function to2DigitNum(timen) {
+            return ('0' + timen).slice(-2);
+        }
+        
+        // Устанавливаем время до конечной "точки" отсчёта
+        var countDownDate = new Date("Jan 27, 2018 15:00:00").getTime();
+        
+        
+        
+
+        // Устанавливаемвремя обновления
+        var x = setInterval(function() {
+
+            // Записываем дату и время сейчас (время клиента/браузера)
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            //Создаём css для классов в html
+            var divTimeStyle = "style=\"color: white; background: #8A8C8E; display: inline-block; border-radius: 5px; padding: 25px 15px; font-size: 2em;\"";
+            var divDividerStyle ="style=\"display: inline-block; font-size: 3em;\"";
+            var numDivider = "<div " + divDividerStyle + ">:</div>";
+            var divDividerStyle = "style=\"display: inline-block; font-size: 3em; color: white;\"";
+            var labelStyle = "style=\"display: inline-block; background: #8A8C8E; color: white; font-size: 0.9em; width: 65px; height: 25px; border-radius: 5px; margin: 10px 0 0 0; text-transform: uppercase; text-align: center; padding: 10px 0 0 0;\"";
+            var intervalStyle = "style=\"display: inline-block; width: 13px; \"";
+            
+            // Создаём html
+            var clock = "<div><div ";
+            clock += divTimeStyle;
+            clock += ">";
+            clock += to2DigitNum(days);
+            clock += "</div>";
+            clock += numDivider;
+            clock += "<div ";
+            clock += divTimeStyle;
+            clock += ">";
+            clock += to2DigitNum(hours);
+            clock += "</div>";
+            clock += numDivider;
+            clock += "<div ";
+            clock += divTimeStyle;
+            clock += ">";
+            clock += to2DigitNum(minutes);
+            clock += "</div>";
+            clock += numDivider;
+            clock += "<div ";
+            clock += divTimeStyle;
+            clock += ">";
+            clock += to2DigitNum(seconds);
+            clock += "</div>";
+            clock += "<div>";
+            clock += "<div " + labelStyle + ">дней</div><div " + intervalStyle + "></div>";
+            clock += "<div " + labelStyle + ">часов</div><div " + intervalStyle + "></div>";
+            clock += "<div " + labelStyle + ">минут</div><div " + intervalStyle + "></div>";
+            clock += "<div " + labelStyle + ">секунд</div>";
+            clock += "</div>";
+            clock += "</div>";
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown").innerHTML = clock;
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Конкурс закончился! Ожидайте результатов конкурса.";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

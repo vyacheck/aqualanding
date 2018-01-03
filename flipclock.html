@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="compiled/flipclock.css">
+		<meta name="http-equiv" content="Content-type: text/html; charset=UTF-8">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style>
+    .clabels {
+        padding: 0;
+        margin: 0 25px; 
+        }
+    
+    .clabel {
+        display: inline-block;
+        width: 136px;
+        height: 30px;
+        text-align: center;
+        padding-top: 10px;
+        margin: 0px 19px 0px 0px;
+        text-transform: uppercase;
+        background: gray;
+        color: white;
+        border-radius: 5px 5px;
+    }
+</style>
+	</head>
+		<script src="compiled/flipclock.js" charset="utf-8"></script>
+	<body>
+	<div class="clock" style="margin:2em;"></div>
+	<div>
+        <ul class="clabels">
+            <li class="clabel">дней</li>
+            <li class="clabel">часов</li>
+            <li class="clabel">минут</li>
+            <li class="clabel">секунд</li>
+        </ul>
+    </div>
+	<div class="message"></div>
+	
+
+	<script>
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+	
+	</body>
+</html>
