@@ -11,8 +11,20 @@
 <body>
     <!-- Display the countdown timer in an element -->
     <p id="countdown"></p>
-
+    
+    <!-- WEBFONTLOADER. Импортируем нужные шрифты из Google Fonts c помощью WebFontLoader https://github.com/typekit/webfontloader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
+      WebFont.load({
+        google: {
+          families: ['Montserrat, 'Roboto Condensed']
+        }
+      });
+    </script>
+    
+    <!-- WEBFONTLOADER. КОНЕЦ -->
+        
+       <script>
         //Функцией добавляем "0" к секундам от 0 до 9 
         function to2DigitNum(timen) {
             return ('0' + timen).slice(-2);
@@ -40,15 +52,13 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             //Создаём css для классов в html
-            var divTimeStyle = "style=\"color: white; background: #8A8C8E; display: inline-block; border-radius: 5px; padding: 25px 15px; font-size: 2em;\"";
-            var divDividerStyle ="style=\"display: inline-block; font-size: 3em;\"";
-            var numDivider = "<div " + divDividerStyle + ">:</div>";
-            var divDividerStyle = "style=\"display: inline-block; font-size: 3em; color: white;\"";
-            var labelStyle = "style=\"display: inline-block; background: #8A8C8E; color: white; font-size: 0.9em; width: 65px; height: 25px; border-radius: 5px; margin: 10px 0 0 0; text-transform: uppercase; text-align: center; padding: 10px 0 0 0;\"";
-            var intervalStyle = "style=\"display: inline-block; width: 13px; \"";
+            var divTimeStyle = "style=\"color: white; background: #8A8C8E; display: inline-block; border-radius: 5px; font-family: 'Roboto Condensed', sans-serif; font-weight: bold; font-size: 50px; text-align: center; width: 82px; height: 57px; margin: 0;\"";
+            var labelStyle = "style=\"display: inline-block; background: #ACAFB1; color: white; font-family: 'Montserrat', sans-serif; font-size: 0.9em; border-radius: 5px; text-align: center; width: 82px; height: 25px; margin: 0;\"";
+            var intervalStyle = "style=\"display: inline-block; width: 11px; \"";
+            var numDivider = "<div " + intervalStyle + "></div>";
             
             // Создаём html
-            var clock = "<div><div ";
+            var clock = "<div style=\"margin: 0; padding: 0;\"><div ";
             clock += divTimeStyle;
             clock += ">";
             clock += to2DigitNum(days);
@@ -70,12 +80,12 @@
             clock += divTimeStyle;
             clock += ">";
             clock += to2DigitNum(seconds);
-            clock += "</div>";
+            clock += "</div style=\"margin: 0; padding: 0;\">";
             clock += "<div>";
             clock += "<div " + labelStyle + ">дней</div><div " + intervalStyle + "></div>";
             clock += "<div " + labelStyle + ">часов</div><div " + intervalStyle + "></div>";
             clock += "<div " + labelStyle + ">минут</div><div " + intervalStyle + "></div>";
-            clock += "<div " + labelStyle + ">секунд</div>";
+            clock += "<div " + labelStyle + ">сек</div>";
             clock += "</div>";
             clock += "</div>";
 
