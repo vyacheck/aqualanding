@@ -1,6 +1,6 @@
 /* Устанавливаем шрифты */
 p, h1, h2, h3, h4, h5, h6, .opensansed {
-    font-family: OpenSansRegular; 
+    font-family: 'Open Sans', sans-serif; 
 }
 
 /* Кнопки с нашим стилем */
@@ -49,3 +49,8 @@ p, h1, h2, h3, h4, h5, h6, .opensansed {
 .uppercased {
     text-transform: uppercase;
 }
+
+.text-redprice {
+    color: #E40103;
+}
+
