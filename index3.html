@@ -14,11 +14,73 @@
 <body>
    
    
-   <!-- ФОРМА РЕИГСТРАЦИИ. НАЧАЛО -->
+  <!-- DUAL FORM. START -->
    <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
   <div class="modal-dialog modal-lg bd-example-modal-lg" role="document">
     <div class="modal-content">
+   
+    
+<!-- NAV TABS. START -->
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ВОЙТИ</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">РЕГИСТРАЦИЯ</a>
+  </li>
+  
+</ul>
+<!-- NAV TABS. END -->
+<!-- TAB PANES. START -->
+<div class="tab-content">
+<!-- FIRST TAB. AUTHORISATION FORM. START -->
+
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <div class="modal-header">
+        <h5 class="modal-title">Вход в каталог ООО &laquo;Аквамарин&raquo; для партнёров</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col align-self-center">
+                    <div class="alert alert-light" role="alert">
+                        Если у вас нет пароля, то сначала <a href="/" class="alert-link" target="_blank">зарегистрируйтесь</a> каталоге.
+                    </div>
+                    <form>
+                           <div class="form-group row">
+                            <label for="emailInput" class="col-sm-4 col-form-label">
+                            E-mail
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="emailInput" placeholder="Ввведите Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="passwordInput" class="col-sm-4 col-form-label">
+                            Пароль
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Введите пароль">
+                            </div>
+                            </div>
+                        <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Запомнить меня на сайте</label>
+                             </div>
+                       
+                        <button type="submit" class="btn btn-outline-aqua btn-lg text-uppercase">Войти в каталог</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      <!-- FIRST TAB. AUTHORISATION FORM. END -->
+      <!-- SECOND TAB. REGISTRATION. START -->
+   <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div class="modal-header">
         <h5 class="modal-title">Регистрация в каталоге ООО &laquo;Аквамарин&raquo; для партнёров </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -125,12 +187,21 @@
                               </select>
                             </div>
                         </div>
+                         <div class="form-group row">
+                            <label for="emailRegistration" class="col-sm-4 col-form-label">
+                            Пароль
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="emailRegistration" aria-describedby="emailHelp" placeholder="Введите E-mail">
+                                <small id="emailHelp" class="form-text text-muted">Пожалуйста, указывайте реальный адрес e-mail</small>
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="passwordSet" class="col-sm-4 col-form-label">
                             Пароль
                             </label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="passwordSet" placeholder="Придумайте пароль">
+                                <input type="password" class="form-control" id="passwordSet" placeholder="Придумайте пароль">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -138,7 +209,7 @@
                             Подтвердите пароль
                             </label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="passwordCheck" placeholder="Повторите пароль">
+                                <input type="password" class="form-control" id="passwordCheck" placeholder="Повторите пароль">
                             </div>
                         </div>
                         <div class="form-check">
@@ -152,7 +223,14 @@
                 </div>
             </div>
         </div>
-      </div>
+      </div></div>
+<!-- SECOND TAB. REGISTRATION. END -->
+   </div>
+
+   <!-- TAB PANES. START -->  
+    
+     
+      
       <!--
        <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>
@@ -162,156 +240,7 @@
     </div>
   </div>
 </div>
-  <!-- ФОРМА РЕГИСТАРЦИИ. КОНЕЦ -->
-  <!-- ФОРМА АВТОРИЗАЦИИ. НАЧАЛО -->
-   <div class="modal fade" tabindex="-1" role="dialog" id="authorizationForm">
-  <div class="modal-dialog modal-lg bd-example-modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Вход в каталог ООО &laquo;Аквамарин&raquo; для партнёров </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-            <div class="row justify-content-md-center">
-                <div class="col align-self-center">
-                    <div class="alert alert-danger" role="alert">
-                        Только для <strong>юридических лиц и индивидуальных предпринимателей</strong>, имеющих свидетельство о постановке на учёт в пробирной палате. Розничные покупатели могут ознакомиться с каталогом изделий <a href="/" class="alert-link" target="_blank">по ссылке</a>.</div>
-                    <form>
-                        <div class="form-group row">
-                            <label for="companyName" class="col-sm-4 col-form-label">
-                            Компания
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="companyName" aria-describedby="emailHelp" placeholder="Введите название вашей компаний">
-                                <small id="emailHelp" class="form-text text-muted">Необходимо указать название компании согласно Устава</small>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputRegion" class="col-sm-4 col-form-label">Регион</label>
-                            <div class="col-sm-8">
-                                <select id="inputRegion" class="form-control">
-                                <option selected>Москва</option>
-                                <option>Санкт-Петербург</option>
-                                <option>Владивосток</option>
-                              </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="companyAdress" class="col-sm-4 col-form-label">
-                            Адрес
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="companyAdress" aria-describedby="emailHelp" placeholder="Введите юридический адрес компании">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="reprName" class="col-sm-4 col-form-label">
-                            ФИО представителя
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="reprName" placeholder="Укажите имя, фамилию и отчество менеджера компании">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="reprPosition" class="col-sm-4 col-form-label">
-                            Должность представителя
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="reprPosition" placeholder="Укажите должность представителя компании">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="reprNumber" class="col-sm-4 col-form-label">
-                            Телефон/Факс
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="reprNumber" placeholder="Номер телефона для связи">
-                            </div>
-                        </div>
-
-                        <p>Что вас интересует?</p>
-
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Золото
-                                      </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Серебро
-                                      </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> С полудрагоценными вставками
-                                      </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> С драгоценными
-                                      </label>
-                        </div>
-                        <div class="form-group row">
-                            <label for="commentToReg" class="col-sm-4 col-form-label">
-                            Комментарии
-                            </label>
-                            <div class="col-sm-8">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Укажите дополнительную информацию"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="managerAqua" class="col-sm-4 col-form-label">Выберите своего менеджера</label>
-                            <div class="col-sm-8">
-                                <select id="managerAqua" class="form-control">
-                                <option selected>Петрова Анна</option>
-                                <option>Иванов Вася</option>
-                                <option>Радогре Веньямин</option>
-                                <option>Кандышов Севастьян</option>
-                              </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="passwordSet" class="col-sm-4 col-form-label">
-                            Пароль
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="passwordSet" placeholder="Придумайте пароль">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="passwordCheck" class="col-sm-4 col-form-label">
-                            Подтвердите пароль
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" id="passwordCheck" placeholder="Повторите пароль">
-                            </div>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Я принимаю пользовательское соглашение
-    </label>
-                        </div>
-                        <button type="submit" class="btn btn-outline-aqua btn-lg uppercased">Отправить заявку</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!--
-       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-      -->
-    </div>
-  </div>
-</div>
-  <!-- ФОРМА АВТОРИЗАЦИИ. КОНЕЦ -->
+ <!-- DUAL FORM. START -->
   
   
   
@@ -390,15 +319,7 @@
             
             <div class="col-lg-3"></div>
         </div>
-        <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-6 centred">
-                <button type="button" class="btn btn-outline-aqua btn-lg uppercased" data-toggle="modal" data-target="#authorizationForm">Смотреть каталог</button>
-            </div>
-          
-            
-            <div class="col-lg-3"></div>
-        </div>
+        
         
         <br>
         <br>
@@ -471,24 +392,28 @@
                     <div class="card-img-overlay">
                         <h4 class="card-title">Коллекция<br>INFINITY</h4> </div>
                     <div class="card-body">
-                        <p class="card-text">Золотые кольца с бриллиантами</p> <a href="#" class="btn btn-outline-aqua uppercased">Смотреть коллекцию</a>
+                        <p class="card-text">Золотые кольца с бриллиантами</p>
+                        
+                        
+                        <a class="btn btn-outline-aqua uppercased" role="button" data-toggle="modal" data-target="#exampleModal">Смотреть коллекцию</a>
                     </div>
-                </div></div>
+                </div>
+                </div>
             <div class="col-lg-4">
                 <div class="card text-dark">
                     <img class="card-img" src="img/3-1600-nontext.jpg" alt="Card image">
                     <div class="card-img-overlay">
                         <h4 class="card-title">Коллекция<br> &laquo;РАНДЕВУ&raquo;</h4> </div>
                     <div class="card-body">
-                        <p class="card-text">Золотые кольца с бриллиантами</p> <a href="#authorizationForm" class="btn btn-outline-aqua uppercased">Смотреть коллекцию</a>
+                        <p class="card-text">Золотые кольца с бриллиантами</p> <a href="#" class="btn btn-outline-aqua uppercased">Смотреть коллекцию</a>
                     </div>
-            </div>
+                </div></div>
             <div class="col-lg-4"><div class="card text-dark">
 <img class="card-img" src="img/4-1600-nontext.jpg" alt="Card image">
                     <div class="card-img-overlay text-right">
                         <h4 class="card-title">Коллекция<br>DARLING</h4> </div>
                     <div class="card-body">
-                        <p class="card-text">Золотые кольца с бриллиантами</p> <a href="#" class="btn btn-outline-aqua uppercased">Смотреть коллекцию</a> </div>
+                        <p class="card-text">Золотые кольца с бриллиантами</p> <a href="/" class="btn btn-outline-aqua text-uppercase">Смотреть коллекцию</a> </div>
                 </div></div>
         </div>
         
