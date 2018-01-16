@@ -54,3 +54,7 @@ p, h1, h2, h3, h4, h5, h6, .opensansed {
     color: #E40103;
 }
 
+.zi-900 {
+    z-index: 900;
+}
+
