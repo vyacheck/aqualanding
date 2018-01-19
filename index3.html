@@ -188,27 +188,27 @@
             <ul class="navbar-nav mx-auto">
                 
                 <!-- SMALL LOGO. START -->
-                <li class="nav-item my-auto mx-3 d-none">
+                <li class="nav-item navbar-brand-collapsed my-auto mx-4 d-none">
                     <a class="navbar-brand" href="#">
                         <img src="img/mobile_logo.svg" width="175" alt="">
                     </a>
                 </li>
                 <!-- SMALL LOGO. END -->
                    
-                <li class="nav-item my-auto mx-3">
+                <li class="nav-item my-auto mx-4">
                     <a class="nav-link" href="#">О компании<span class="sr-only">(current)</span></a> </li>
-                <li class="nav-item my-auto  mx-3">
+                <li class="nav-item my-auto  mx-4">
                     <a class="nav-link" href="#">Сотрудничество</a> </li>
                 
                 <!-- BIG LOGO. START -->
-                <li class="nav-item nvabar-brand-big my-auto mx-3 d-none d-lg-block">
+                <li class="nav-item nvabar-brand-big my-auto mx-4 d-none d-lg-block">
                     <a class="navbar-brand" href="#">
                         <img src="img/logo.svg" width="175" alt="">
                     </a>
                 </li>
                 <!-- BIG LOGO. END -->
                 
-                <li class="nav-item dropdown my-auto  mx-3"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown my-auto  mx-4"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Каталог
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -426,9 +426,12 @@
             // Put your offset checking in a function
             function checkOffset() {
                 if ($(".navbar").offset().top > 300) {
-                    $(".nvabar-brand-big").remove("d-lg-block");
+                    $(".nvabar-brand-big").removeClass("d-lg-block");
+                    $(".navbar-brand-collapsed").addClass("d-lg-block");
+                    
                 } else {
-                    $(".nvabar-brand-big").addClass("d-lg-block");
+                    $(".navbar-brand-collapsed").removeClass("d-lg-block");
+                    $(".nvabar-brand-big").addClass("d-lg-block");                    
                 }
             }
 
