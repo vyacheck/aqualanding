@@ -180,21 +180,32 @@
     
     <!-- NAVBAR. START -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-        <a class="navbar-brand d-lg-none" href="#">
+        <a class="navbar-brand navbar-brand-small d-lg-none" href="#">
             <img src="img/mobile_logo.svg" width="175" alt="">
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
+                
+                <!-- SMALL LOGO. START -->
+                <li class="nav-item my-auto mx-3 d-none">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/mobile_logo.svg" width="175" alt="">
+                    </a>
+                </li>
+                <!-- SMALL LOGO. END -->
+                   
                 <li class="nav-item my-auto mx-3">
                     <a class="nav-link" href="#">О компании<span class="sr-only">(current)</span></a> </li>
                 <li class="nav-item my-auto  mx-3">
                     <a class="nav-link" href="#">Сотрудничество</a> </li>
                 
                 <!-- BIG LOGO. START -->
-                <a class="navbar-brand nvabar-brand-big d-none d-none d-lg-block d-xl-block" href="#">
-                    <img src="img/logo.svg" width="175" alt="">
-                </a>
+                <li class="nav-item nvabar-brand-big my-auto mx-3 d-none d-lg-block">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.svg" width="175" alt="">
+                    </a>
+                </li>
                 <!-- BIG LOGO. END -->
                 
                 <li class="nav-item dropdown my-auto  mx-3"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -415,10 +426,9 @@
             // Put your offset checking in a function
             function checkOffset() {
                 if ($(".navbar").offset().top > 300) {
-                    $(".nvabar-brand-big").addClass("invisible");
-                }     
-                else {
-                    $(".nvabar-brand-big").removeClass("invisible");
+                    $(".nvabar-brand-big").remove("d-lg-block");
+                } else {
+                    $(".nvabar-brand-big").addClass("d-lg-block");
                 }
             }
 
@@ -432,6 +442,10 @@
             });
         });
     </script>
+    
+    
+    
+    
      <!-- COLLAPSING LOGO ON THE SCROLL. END  -->
 </body>
 
