@@ -192,7 +192,7 @@
                     <a class="nav-link" href="#">Сотрудничество</a> </li>
                 
                 <!-- BIG LOGO. START -->
-                <a class="navbar-brand d-none d-none d-lg-block d-xl-block" href="#">
+                <a class="navbar-brand nvabar-brand-big d-none d-none d-lg-block d-xl-block" href="#">
                     <img src="img/logo.svg" width="175" alt="">
                 </a>
                 <!-- BIG LOGO. END -->
@@ -400,11 +400,39 @@
             <div class="col centred"><img src="img/star.svg" width="75" alt=""></div>
         </div>
     </div>
+    
+    
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- COLLAPSING LOGO ON THE SCROLL. START  -->
+    <script>
+            $(document).ready(function() {
+
+            // Put your offset checking in a function
+            function checkOffset() {
+                if ($(".navbar").offset().top > 300) {
+                    $(".nvabar-brand-big").addClass("invisible");
+                }     
+                else {
+                    $(".nvabar-brand-big").removeClass("invisible");
+                }
+            }
+
+            // Run it when the page loads
+            checkOffset();
+
+
+            // Run function when scrolling
+            $(window).scroll(function() {
+                checkOffset();
+            });
+        });
+    </script>
+     <!-- COLLAPSING LOGO ON THE SCROLL. END  -->
 </body>
 
 </html>
