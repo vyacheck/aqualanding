@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,16 +30,16 @@
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Привет,<br>Я - интернет-маркетолог</h1>
                     <p class="col-md-8 fs-4">12 лет увеличиваю продажи в онлайн-проектах. Менеджер digital-команд. Нужны продажи?</p>
-                    
+
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                       Свяжитесь со мной
+                        Свяжитесь со мной
                     </button>
-                    
-                    <!-- Button trigger modal 2 -->
+
+                    <!-- Button trigger modal
                     <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalSignin">
-                       Свяжитесь со мной
-                    </button>
+                        Свяжитесь со мной
+                    </button> 2 -->
                 </div>
             </div>
 
@@ -94,7 +95,7 @@
         </div>
     </main>
 
-<!-- Modal
+    <!-- Modal
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -112,104 +113,123 @@
     </div>
   </div>
 </div> Modal End -->
-    
+
     <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Как с вами связаться</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="modal-body p-5 pt-0">
-        <form class="">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-4" id="floatingName" placeholder="Как к вам обращаться?">
-            <label for="floatingName">Как к вам обращаться?</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-4" id="floatingEmail" placeholder="moy_email@company.by">
-            <label for="floatingEmail">Ваш Email</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control rounded-4" id="floatingPhone" placeholder="Phone">
-            <label for="floatingPhone">Ваш телефон</label>
-          </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
-          <small class="text-muted">Нажимая на кнопку, вы соглашайтесь с условиями Пользовательского соглашения</small>
-          <hr class="my-4">
-          <h2 class="fs-5 fw-bold mb-3">Или свяжитесь со мной</h2>
-          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
-            Sign up with Twitter
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
-            Sign up with Facebook
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-            Sign up with GitHub
-          </button>
-        </form>
-      </div>
-      </div>
-      <!-- <div class="modal-footer">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Как с вами связаться</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body p-5 pt-0">
+                        <form class="" method="post" action="https://forms.un-static.com/forms/49ea8560f785ca5baf5ef1fb456dc191b9888930">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control rounded-4" id="floatingName" placeholder="Имя">
+                                <label for="floatingName">Как к вам обращаться?</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-4" id="floatingEmail" placeholder="Email">
+                                <label for="floatingEmail">Ваш Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="textarea" class="form-control rounded-4" id="floatingPhone" placeholder="Телефон"  required>
+                                <label for="floatingPhone">Ваш телефон</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="floatingTextarea" rows="3" placeholder="Запрос" class="form-control rounded-4" style="height: 100px"></textarea>
+                                <label for="floatingTextarea">Опишите ваш запрос</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Отправить</button>
+                            <small class="text-muted">Нажимая на кнопку, вы соглашайтесь с условиями Пользовательского соглашения</small>
+                            <hr class="my-4">
+                            <h2 class="fs-5 fw-bold mb-3">Или напишите мне в мессенджер:</h2>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#twitter" />
+                                </svg>
+                                Sign up with Twitter
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#facebook" />
+                                </svg>
+                                Sign up with Facebook
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                                <svg class="bi me-1" width="16" height="16">
+                                    <use xlink:href="#github" />
+                                </svg>
+                                Sign up with GitHub
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
       </div> -->
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <!-- Modal End -->
-    
-    
-    <!-- Modal Form 2 -->
-    <div class="modal modal-signin position-static d-block bg-secondary py-5" data-bs-backdrop="static" tabindex="-1" role="dialog" id="modalSignin">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content rounded-5 shadow">
-      <div class="modal-header p-5 pb-4 border-bottom-0">
-        <!-- <h5 class="modal-title">Modal title</h5> -->
-        <h2 class="fw-bold mb-0">Sign up for free</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
 
-      <div class="modal-body p-5 pt-0">
-        <form class="">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
-          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-          <hr class="my-4">
-          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
-            Sign up with Twitter
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
-            Sign up with Facebook
-          </button>
-          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-            Sign up with GitHub
-          </button>
-        </form>
-      </div>
+
+    <!-- Modal Form 2 (ACTUAL) -->
+    <div class="modal modal-signin position-static d-block bg-secondary py-5" data-bs-backdrop="static" tabindex="-1" role="dialog" id="modalSignin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <h2 class="fw-bold mb-0">Sign up for free</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+                        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                        <hr class="my-4">
+                        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#twitter" />
+                            </svg>
+                            Sign up with Twitter
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#facebook" />
+                            </svg>
+                            Sign up with Facebook
+                        </button>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                            <svg class="bi me-1" width="16" height="16">
+                                <use xlink:href="#github" />
+                            </svg>
+                            Sign up with GitHub
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <!-- Modal Form 2. End -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
-</body></html>
+</body>
+
+</html>
