@@ -1,0 +1,10 @@
+/*
+Jumbotron background image
+https://jsfiddle.net/bootstrapious/f7ewb3pg/
+*/
+
+.jumbotron-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
